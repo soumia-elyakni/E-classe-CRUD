@@ -26,7 +26,7 @@
               <button style="border: transparent; background: transparent; align-self: center;"> 
                  <img src="images/svg/buttonpay.svg">
               </button>
-              <a href="form.php"><button class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
+              <a href="formAdSt.php"><button class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
              ADD NEW STUDENT
              </button></a>
              </div>
@@ -70,8 +70,8 @@
               <td class='pt-3'>".$row['phone']."</td>
               <td class='pt-3'>".$row['enroll_number']."</td>
               <td class='pt-3'>".$row['date_of_admission']."</td> 
-              <td class='pt-3'><a href='update.php?email=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-pen' style='color: turquoise;'></i></td></button></a>
-              <td class='pt-3'><a href='delete.php?index=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-trash' style='color: turquoise;'></i></td></button></a>
+              <td class='pt-3'><a href='updateSt.php?email=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-pen' style='color: turquoise;'></i></td></button></a>
+              <td class='pt-3'><a href='deleteSt.php?index=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-trash' style='color: turquoise;'></i></td></button></a>
             </tr>";
               }
 
