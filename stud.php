@@ -52,7 +52,7 @@
           
           <?php
 
-           $connect = mysqli_connect("localhost", "root", "", "e_classe_db");
+           $connect = mysqli_connect('sql301.epizy.com', 'epiz_31043651', 'P4xmhy6c7hTr9T', 'epiz_31043651_e_classe_db');
            if($connect -> connect_error) {
              die("connection failed :".$connect -> connect_error);
            }

@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', '', 'e_classe_db');
+$conn = new mysqli('sql301.epizy.com', 'epiz_31043651', 'P4xmhy6c7hTr9T', 'epiz_31043651_e_classe_db');
 // $slt= "SELECT * FROM students WHERE email= ]" ;
 
 // if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -63,7 +63,7 @@ $conn = new mysqli('localhost', 'root', '', 'e_classe_db');
 </head>
 <body>
     <?php
-    $connect =  new mysqli('localhost', 'root', '', 'e_classe_db');
+    $connect =  new mysqli('sql301.epizy.com', 'epiz_31043651', 'P4xmhy6c7hTr9T', 'epiz_31043651_e_classe_db');
 
     if(isset($_POST['update'])){
         $student_email = $_GET['index'];    
