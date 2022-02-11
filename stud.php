@@ -70,7 +70,7 @@
               <td class='pt-3'>".$row['phone']."</td>
               <td class='pt-3'>".$row['enroll_number']."</td>
               <td class='pt-3'>".$row['date_of_admission']."</td> 
-              <td class='pt-3'><a href='updateSt.php?email=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-pen' style='color: turquoise;'></i></td></button></a>
+              <td class='pt-3'><a href='updateSt.php?index=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-pen' style='color: turquoise;'></i></td></button></a>
               <td class='pt-3'><a href='deleteSt.php?index=".$row['email']."'><button style='background-color: transparent; border:transparent'><i class='fas fa-trash' style='color: turquoise;'></i></td></button></a>
             </tr>";
               }
