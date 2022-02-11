@@ -1,3 +1,23 @@
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "e_classe_db");
+if($conn -> connect_error) {
+  die("connection failed :".$conn -> connect_error);
+}
+$students=$conn->query("SELECT COUNT(id) As NumberOfStudent FROM students");
+$student= $students->fetch_array() ;
+$student= $student[0];
+
+$courses=$conn->query("SELECT COUNT(title) As NumberOfCourse FROM courses");
+$course= $courses->fetch_array() ;
+$course= $course[0];
+
+$payments=$conn->query("SELECT SUM(amount_paid) As NumberOfAmount FROM payements");
+$payment= $payments->fetch_array() ;
+$payment= $payment[0];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +35,7 @@
 
 <body class="m-0 p-0 w-100 h-100 bg-light">
     <?php include_once('dash.php');
-$var_a=333;
+
 ?>
     <main class=" mx-2">
        <div class="d-lg-flex d-md-flex gap-md-2 d-sm-block justify-content-around">
@@ -23,7 +43,7 @@ $var_a=333;
                 <div class="card-body">
                    <img src="images/svg/Stud2.svg">
                    <h5 class="card-title">Students</h5>
-                   <p class="card-text" style="text-align:end"><?= $var_a ?></p>
+                   <p class="card-text" style="text-align:end"><?php echo $student ?></p>
                 </div>
            </div>
 
@@ -32,7 +52,7 @@ $var_a=333;
                 <div class="card-body">
                    <img src="images/svg/Crs2.svg">
                    <h5 class="card-title">Course</h5>
-                   <p class="card-text" style="text-align:end">13</p>
+                   <p class="card-text" style="text-align:end"><?php echo $course ?></p>
                 </div>
            </div>
 
@@ -41,7 +61,7 @@ $var_a=333;
                 <div class="card-body">
                    <img src="images/svg/pay2.svg">
                    <h5 class="card-title">Payements</h5>
-                   <p class="card-text" style="text-align:end"><span>DHS</span>556,000</p>
+                   <p class="card-text" style="text-align:end"><span>DHS</span><?php echo $payment ?></p>
                 </div>
            </div>
 
